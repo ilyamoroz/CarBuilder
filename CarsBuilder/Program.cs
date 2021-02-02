@@ -9,19 +9,20 @@ namespace CarsBuilder
     {
         static void Main(string[] args)
         {
-            var director = new Director();
-            var builder = new ConcreteBuilder();
-            director.Builder = builder;
+            BMWBuilder bmwBuilder = new BMWBuilder();
+            bmwBuilder.AddModel();
+            bmwBuilder.AddEngine();
+            bmwBuilder.AddCarBody();
+            bmwBuilder.AddWheel();
+            Console.WriteLine(bmwBuilder.Build());
 
-            Console.WriteLine("BMW:");
-            director.CreateBMW();
-            Console.WriteLine(builder.GetProduct().ListParts());
 
-            Console.WriteLine("Mercedes-Benz:");
-            director.CreateMercedes();
-            Console.WriteLine(builder.GetProduct().ListParts());
+            MercedesBuilder mercedesBuilder = new MercedesBuilder();
+            mercedesBuilder.AddModel();
+            mercedesBuilder.AddEngine();
+            mercedesBuilder.AddCarBody();
 
-            
+            Console.WriteLine(mercedesBuilder.Build());   
         }
     }
 }

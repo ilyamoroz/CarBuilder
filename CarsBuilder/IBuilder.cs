@@ -6,10 +6,10 @@ namespace CarsBuilder
 {
     public interface IBuilder
     {
-        void AddMark(string mark);
-
-        void AddEngine(string engine);
-
-        void AddCarBody(string carBody);
+        void AddModel();
+        void AddEngine();
+        void AddWheel();
+        void AddCarBody();
+        string Build();
     }
 }
