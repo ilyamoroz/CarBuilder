@@ -10,6 +10,6 @@ namespace CarsBuilder
         void AddEngine();
         void AddWheel();
         void AddCarBody();
-        string Build();
+        object Build();
     }
 }

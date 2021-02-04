@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace CarsBuilder
 {
@@ -9,20 +10,26 @@ namespace CarsBuilder
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Car:");
             BMWBuilder bmwBuilder = new BMWBuilder();
             bmwBuilder.AddModel();
             bmwBuilder.AddEngine();
             bmwBuilder.AddCarBody();
             bmwBuilder.AddWheel();
-            Console.WriteLine(bmwBuilder.Build());
 
+            Console.WriteLine(bmwBuilder.Build().ToString());
 
+            Console.WriteLine("Car:");
             MercedesBuilder mercedesBuilder = new MercedesBuilder();
             mercedesBuilder.AddModel();
             mercedesBuilder.AddEngine();
             mercedesBuilder.AddCarBody();
 
-            Console.WriteLine(mercedesBuilder.Build());   
+
+            Console.WriteLine(mercedesBuilder.Build().ToString());
+
+
+             
         }
     }
 }
