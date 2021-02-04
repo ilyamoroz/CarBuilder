@@ -6,29 +6,29 @@ namespace CarsBuilder
 {
     class MercedesBuilder : IBuilder
     {
-        object car;
+        Car car = new Car();
         public MercedesBuilder()
         {
-            car += "Mercedes-Benz,";
+            car.brand = "Mercedes-Benz, ";
         }
         public void AddModel()
         {
-            car += "Model: s63,";
+            car.model = "s63, ";
         }
 
         public void AddEngine()
         {
-            car += "Engine: 3.0,";
+            car.engine = "3.0, ";
         }
         public void AddWheel()
         {
-            car += "Wheels: 16,";
+            car.wheel = "16, ";
         }
         public void AddCarBody()
         {
-            car += "Car Body: Sedan";
+            car.carBody = "Sedan";
         }
-        public object Build()
+        public Car Build()
         {
             return car;
         }

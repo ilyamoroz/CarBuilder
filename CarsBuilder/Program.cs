@@ -10,7 +10,6 @@ namespace CarsBuilder
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Car:");
             BMWBuilder bmwBuilder = new BMWBuilder();
             bmwBuilder.AddModel();
             bmwBuilder.AddEngine();
@@ -19,7 +18,7 @@ namespace CarsBuilder
 
             Console.WriteLine(bmwBuilder.Build().ToString());
 
-            Console.WriteLine("Car:");
+            
             MercedesBuilder mercedesBuilder = new MercedesBuilder();
             mercedesBuilder.AddModel();
             mercedesBuilder.AddEngine();
